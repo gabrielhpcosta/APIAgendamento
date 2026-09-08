@@ -1,17 +1,93 @@
-# API Agendamento
+# API de Agendamento
 
-API REST desenvolvida em Java com Spring Boot para gerenciamento de agendamentos.
+API REST desenvolvida em **Java** e **Spring Boot** para gerenciamento de agendamentos.
+
+O projeto foi criado com foco em praticar desenvolvimento backend, organização de uma API REST e persistência de dados utilizando o ecossistema Spring.
 
 ## Tecnologias
+
 - Java 21
-- Spring Boot
+- Spring Boot 4.1
+- Spring Web MVC
 - Spring Data JPA
 - Hibernate
 - H2 Database
 - Lombok
+- Maven
 
 ## Funcionalidades
-- Criar agendamento
+
+- Criar agendamentos
+- Consultar agendamentos
 - Buscar agendamentos por data
-- Alterar agendamento
-- Deletar agendamento
+- Atualizar agendamentos
+- Excluir agendamentos
+
+## Arquitetura
+
+O projeto segue uma estrutura em camadas, separando responsabilidades da aplicação entre os principais componentes do backend.
+
+```text
+src/main/java
+├── controller
+├── service
+├── repository
+├── entity
+└── dto
+```
+
+> A estrutura exata pode variar conforme a evolução do projeto.
+
+## Como executar
+
+### Pré-requisitos
+
+- Java 21
+- Git
+
+O projeto inclui o Maven Wrapper, portanto não é obrigatório possuir o Maven instalado globalmente.
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/gabrielhpcosta/APIAgendamento.git
+cd APIAgendamento
+```
+
+### Executar no Windows
+
+```bash
+mvnw.cmd spring-boot:run
+```
+
+### Executar no Linux/macOS
+
+```bash
+./mvnw spring-boot:run
+```
+
+Após a inicialização, a aplicação ficará disponível por padrão em:
+
+```text
+http://localhost:8080
+```
+
+## Banco de dados
+
+O projeto utiliza **H2 Database**, facilitando a execução local e os estudos sem necessidade de configurar um banco de dados externo.
+
+## Objetivo do projeto
+
+Este projeto faz parte dos meus estudos de desenvolvimento backend com Java e Spring Boot, com foco em:
+
+- APIs REST
+- Persistência com JPA
+- Separação de responsabilidades
+- Boas práticas de desenvolvimento backend
+- Evolução da arquitetura de aplicações Spring
+
+## Autor
+
+**Gabriel Pinheiro**
+
+Backend Developer focado em Java e Spring Boot.
