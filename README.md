@@ -23,6 +23,41 @@ O projeto foi criado com foco em praticar desenvolvimento backend, organização
 - Atualizar agendamentos
 - Excluir agendamentos
 
+## Endpoints
+
+Base URL: `http://localhost:8080`
+
+| Método | Rota | Parâmetros | Descrição |
+|---|---|---|---|
+| `POST` | `/agendamento` | corpo JSON | Cria um novo agendamento (retorna `201 Created`) |
+| `GET` | `/agendamento` | `data` (ex.: `2026-10-20`) | Lista os agendamentos de um dia |
+| `PUT` | `/agendamento` | `cliente`, `dataHoraAgendamento` + corpo JSON | Altera um agendamento existente |
+| `DELETE` | `/agendamento` | `cliente`, `dataHoraAgendamento` | Exclui um agendamento (retorna `204 No Content`) |
+
+### Exemplo de requisição
+
+`POST /agendamento`
+
+```json
+{
+  "servico": "Corte de cabelo",
+  "profissional": "Ana",
+  "dataHoraAgendamento": "2026-10-20T14:30:00",
+  "cliente": "João Silva",
+  "telefoneCliente": "19999999999"
+}
+```
+
+### Exemplos de consulta, alteração e exclusão
+
+```text
+GET    /agendamento?data=2026-10-20
+PUT    /agendamento?cliente=João Silva&dataHoraAgendamento=2026-10-20T14:30:00
+DELETE /agendamento?cliente=João Silva&dataHoraAgendamento=2026-10-20T14:30:00
+```
+
+> O banco H2 roda em memória. O console fica disponível em `http://localhost:8080/h2-console` com a aplicação rodando.
+
 ## Arquitetura
 
 O projeto segue uma estrutura em camadas, separando responsabilidades da aplicação entre os principais componentes do backend.
@@ -88,6 +123,8 @@ Este projeto faz parte dos meus estudos de desenvolvimento backend com Java e Sp
 
 ## Autor
 
-**Gabriel Pinheiro**
+**Gabriel Henrique Costa**
+
+[LinkedIn](https://www.linkedin.com/in/gabrielhpcosta) · [GitHub](https://github.com/gabrielhpcosta)
 
 Backend Developer focado em Java e Spring Boot.
